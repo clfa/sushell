@@ -28,6 +28,6 @@ do
 done
 /usr/bin/tar -jcp -f "$tarname"".tar.bz2" *.kbak *.skbak 2>>"$tarname"".log"
 rm -rf *.kbak *.skbak 2>>"$tarname"".log"
-glogsize=`ls -l "$tarname"".log" | awk '{print $5}'`
+logsize=`ls -l "$tarname"".log" | awk '{print $5}'`
 test "$logsize"x = "0"x && rm "$tarname"".log" 
 exit 0
