@@ -9,7 +9,7 @@ set -e
 # Distinguish directory reality
 if test ! -d $1 ; then
     echo "Not exist directory."
-    return
+    exit 1
 fi
 
 # Change field sperator
@@ -20,7 +20,7 @@ IFS="
 findres=$(mktemp /tmp/tmp.XXXXXXXXXX)
 if test ! -f $findres ; then
     echo "Can not make temp file."
-    return
+    exit 2
 fi
 
 find $1 -type f | grep ' ' > $findres
@@ -38,3 +38,4 @@ rm -rf $findres
 
 # Resume field sperator
 IFS=$oIFS
+exit 0
