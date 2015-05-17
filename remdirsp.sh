@@ -2,7 +2,7 @@
 
 if test ! -d $1 ; then
     echo "Not a valid argument."
-    return
+    exit 1
 fi
 
 findres="findres.txt"
@@ -21,11 +21,11 @@ if [ -f $findres ]; then
         "Y"|"y")
         ;;
         "N"|"n")
-            return
+            exit 2
             ;;
         *)
             echo "Can not distinguish your input."
-            return
+            exit 3
             ;;
     esac
 
@@ -42,5 +42,6 @@ if [ -f $findres ]; then
     IFS=$oIFS
 else
     echo "Can not find the directory to meet the condition."
-    return
+    exit 4
 fi
+exit 0
