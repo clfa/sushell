@@ -1,4 +1,9 @@
 #!/bin/bash
+# The script aids to read files list and git clone or update projects.
+# Author: safesky
+# Email: safesky@163.com
+# Time: 2015-06-14  
+
 
 # Read from files list and git clone my codes.
 if [ -e repo.list ]; then
