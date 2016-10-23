@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 
 #The script aims to bat pull source code directories' which were pulled from github.
 #Author: safesky
