@@ -1,0 +1,18 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\启动Cygwin]
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\启动Cygwin\command]
+@="\"C:\\cygwin64\\bin\\mintty.exe\" -i /Cygwin-Terminal.ico  /bin/env _T=%V  /bin/zsh -l -i"
+
+-------------------------------------------------------------------------------------------------
+
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\清空剪切板]
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\清空剪切板\command]
+@="cmd /c \"echo off | clip\""
+
+--------------------------------------------------------------------------------------------------
+
