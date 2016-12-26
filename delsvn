@@ -1,0 +1,8 @@
+@echo off
+set workspace=c:\test
+set platformDir=%workspace%
+
+for /r %platformDir% %%a in (.) do if exist %%a\.svn rd /s/q %%a\.svn 
+
+pause 
+@echo on
